@@ -1,5 +1,7 @@
 # IF YOU WANT TO TRY THE KEYMAP JUST DOWNLOAD THE UF2 FILE ABOVE AND FLASH TO KEYBOARD
 OTHERWISE YOU CAN DOWNLOAD THE KEYBOARD FILE (FRAMEWORK) TO MODIFY THE KEYMAP AND RGB COLORS AND COMPILE YOURSELF
+
+I have more versions of RGB Keymaps with more or less complexity but need to polish before adding to the file. I just wanted to get at least one keymap available for those that didnt spend months figuring out how to code this
 ##
 ##
 ## ANSI/US RGB keyboard key location to LED Index (Zeroed Values)
