@@ -43,7 +43,9 @@ OTHERWISE YOU CAN DOWNLOAD THE KEYBOARD FILE (FRAMEWORK) TO MODIFY THE KEYMAP AN
 # THESE ARE THE KEYS ASSOCIATED WITH EACH LAYER.
   ** 3 LAYERS LAYOUTS ARE NOT INCLUDED AS EVERY KEY IS TRANSPARENT ON THESE LAYERS: _CAPS, _SFT AND _CTRL.
 
-The Layer Priority is _RGB then _CTRL then _SFT and then _CAPS.
+The Layer Priority is _RGB then _CTRL then _SFT and then _CAPS. 
+
+(If higher priority layer is on then the layers with lower priority will have mods turned off until the higher priority layer is deactivated)
 
 The Base Layers are _BASE and _FN_LOCK (toggle)  with _FN (momentary key)
 
