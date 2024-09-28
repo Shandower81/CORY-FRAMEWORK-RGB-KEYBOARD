@@ -160,12 +160,6 @@ void Lyr_On(int lyr_val) {
         case 5: sft_x  = lyr_num; break;
         case 6: ctrl_x = lyr_num; break;
     };
-    if (IS_LAYER_ON(_RGB)) {
-        if (get_mods() == MOD_BIT(KC_LSFT) && sft_x  > 0) { unregister_code(KC_LSFT); lsft_val = 1; }
-        if (get_mods() == MOD_BIT(KC_RSFT) && sft_x  > 0) { unregister_code(KC_RSFT); rsft_val = 1; }
-        if (get_mods() == MOD_BIT(KC_LCTL) && ctrl_x > 0) { unregister_code(KC_LCTL); lctl_val = 1; }
-        if (get_mods() == MOD_BIT(KC_RCTL) && ctrl_x > 0) { unregister_code(KC_RCTL); rctl_val = 1; }
-    };
 };
 
 void Lyr_Off(int lyr_val) {
@@ -182,12 +176,6 @@ void Lyr_Off(int lyr_val) {
     if (caps_x > lyr_off) { --caps_x;};
     if (sft_x > lyr_off) { --sft_x;};
     if (ctrl_x > lyr_off) { --ctrl_x;};
-    if (IS_LAYER_OFF(_RGB)) {
-        if (get_mods() != MOD_BIT(KC_LSFT) && lsft_val == 1 && sft_x  > 0) { register_code(KC_LSFT); lsft_val = 0; }
-        if (get_mods() != MOD_BIT(KC_RSFT) && rsft_val == 1 && sft_x  > 0) { register_code(KC_RSFT); rsft_val = 0; }
-        if (get_mods() != MOD_BIT(KC_LCTL) && lctl_val == 1 && ctrl_x > 0) { register_code(KC_LCTL); lctl_val = 0; }
-        if (get_mods() != MOD_BIT(KC_RCTL) && rctl_val == 1 && ctrl_x > 0) { register_code(KC_RCTL); rctl_val = 0; }
-    };
 };
 
 
@@ -515,6 +503,18 @@ bool rgb_matrix_indicators_advanced_user(uint8_t led_min, uint8_t led_max) {
             register_code(KC_CAPS);
             unregister_code(KC_CAPS);
         }
+    };
+    if (IS_LAYER_ON(_RGB)) {
+        if (get_mods() == MOD_BIT(KC_LSFT) && sft_x  > 0) { unregister_code(KC_LSFT); lsft_val = 1; }
+        if (get_mods() == MOD_BIT(KC_RSFT) && sft_x  > 0) { unregister_code(KC_RSFT); rsft_val = 1; }
+        if (get_mods() == MOD_BIT(KC_LCTL) && ctrl_x > 0) { unregister_code(KC_LCTL); lctl_val = 1; }
+        if (get_mods() == MOD_BIT(KC_RCTL) && ctrl_x > 0) { unregister_code(KC_RCTL); rctl_val = 1; }
+    };
+    if (IS_LAYER_OFF(_RGB)) {
+        if (get_mods() != MOD_BIT(KC_LSFT) && lsft_val == 1 && sft_x  > 0) { register_code(KC_LSFT); lsft_val = 0; }
+        if (get_mods() != MOD_BIT(KC_RSFT) && rsft_val == 1 && sft_x  > 0) { register_code(KC_RSFT); rsft_val = 0; }
+        if (get_mods() != MOD_BIT(KC_LCTL) && lctl_val == 1 && ctrl_x > 0) { register_code(KC_LCTL); lctl_val = 0; }
+        if (get_mods() != MOD_BIT(KC_RCTL) && rctl_val == 1 && ctrl_x > 0) { register_code(KC_RCTL); rctl_val = 0; }
     };
     return true;
 }
