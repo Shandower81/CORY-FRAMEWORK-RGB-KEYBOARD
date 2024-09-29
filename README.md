@@ -124,3 +124,6 @@ The Base Layers are _BASE and _FN_LOCK (toggle)  with _FN (momentary key)
 ![CONTROL LAYER ACTIVE while LEFT CTRL KEY PRESSED](https://github.com/user-attachments/assets/1981b8f5-fc24-4015-90eb-e6c29875f490)
 ![CONTROL LAYER ACTIVE while RIGHT CTRL KEY PRESSED](https://github.com/user-attachments/assets/b061cc90-23d2-4e77-9c96-48afa82fcc4c)
 
+## VIDEO OF KEYMAP NAVIGATION
+
+https://www.dropbox.com/scl/fi/vc1fssw52lvtmzqev77db/Vid-of-CORY6-Keymap-1.mp4?rlkey=hmqnncffqd1t3c9e7mv3kijuq&st=gei3mnvt&dl=0
